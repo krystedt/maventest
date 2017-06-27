@@ -26,7 +26,7 @@ import java.util.List;
 
 @Stateless
 public class BookService {
-
+	//
     @PersistenceContext(unitName = "book-pu")
     private EntityManager entityManager;
 
