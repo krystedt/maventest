@@ -9,7 +9,6 @@ pipeline {
                 '''
             }
         }
-
         stage ('Build') {
             steps {
                 sh 'cd Test && mvn -Dmaven.test.failure.ignore=true clean install' 
@@ -23,7 +22,7 @@ pipeline {
         stage('Deploy') {
             steps {
             	//might use environment variables to do a simple cp from absolute path to deploy dir
-                sh 'Test/target/*.war /home/kalle/temp/ProdentusApp.war' 
+                sh 'cp Test/target/*.war /home/kalle/temp/ProdentusApp.war' 
             }
         }
     }
