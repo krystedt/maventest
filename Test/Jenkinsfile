@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy') {
             steps {
             	//might use environment variables to do a simple cp from absolute path to deploy dir
-                echo 'Deploying'
+                sh 'Test/target/*.war /home/kalle/temp/ProdentusApp.war' 
             }
         }
     }
