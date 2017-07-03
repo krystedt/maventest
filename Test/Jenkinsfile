@@ -22,6 +22,7 @@ pipeline {
         stage('Deploy') {
             steps {
             	//might use environment variables to do a simple cp from absolute path to deploy dir
+            	//might be better to use stash in build step..
                 sh 'cp Test/target/*.war /home/kalle/temp/ProdentusApp.war' 
             }
         }
