@@ -16,7 +16,7 @@ pipeline {
         }
         stage ('Build') {
             steps {
-                sh 'cd Test && mvn -Dmaven.test.failure.ignore=true clean install' 
+                sh 'cd Test && mvn -Dmaven.test.failure.ignore=true -Demailwarnings.enabled=true clean install' 
             }
             post {
                 success {
@@ -27,14 +27,11 @@ pipeline {
         stage('Deploy') {
             steps {
             	//might need to use stash/unstash in build step..
-            	//
             	script {
             	 	Date date = new Date()
             	 	def dateString = date.format ('yyyy-MM-dd')
-                	echo dateString
                 	sh "mkdir /home/kalle/temp/${dateString} && cp Test/target/*.war /home/kalle/temp/${dateString}/ProdentusApp.war" 
                 } 
-                
             }
         }
     }
