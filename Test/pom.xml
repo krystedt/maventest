@@ -27,11 +27,13 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <emailwarnings.enabled>true</emailwarnings.enabled>
   </properties>
   <scm>
     <developerConnection>scm:git:https://github.com/krystedt/maventest.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
+  
   <dependencies>
     <dependency>
       <groupId>org.apache.tomee</groupId>
@@ -95,6 +97,15 @@
   </dependencies>
 
   <build>
+  
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+
+    </resources>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
