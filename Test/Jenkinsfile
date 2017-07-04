@@ -28,8 +28,10 @@ pipeline {
             steps {
             	//might be better to use stash in build step..
             	//
+            	script {
             	 Date date = new Date()
-                echo date.format ('yyyy-MM-dd') 
+                echo date.format ('yyyy-MM-dd')
+                } 
                 sh 'cp Test/target/*.war /home/kalle/temp/ProdentusApp.war' 
             }
         }
