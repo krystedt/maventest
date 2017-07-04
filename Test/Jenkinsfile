@@ -11,8 +11,7 @@ pipeline {
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
                 '''
-                Date date = new Date()
-                echo date.format ('yyyy-MM-dd') 
+               
             }
         }
         stage ('Build') {
@@ -29,6 +28,8 @@ pipeline {
             steps {
             	//might be better to use stash in build step..
             	//
+            	 Date date = new Date()
+                echo date.format ('yyyy-MM-dd') 
                 sh 'cp Test/target/*.war /home/kalle/temp/ProdentusApp.war' 
             }
         }
