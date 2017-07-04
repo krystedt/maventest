@@ -26,13 +26,15 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-            	//might be better to use stash in build step..
+            	//might need to use stash/unstash in build step..
             	//
             	script {
-            	 Date date = new Date()
-                echo date.format ('yyyy-MM-dd')
+            	 	Date date = new Date()
+            	 	def dateString = date.format ('yyyy-MM-dd')
+                	echo dateString
+                	sh "mkdir /home/kalle/temp/${dateString} && cp Test/target/*.war /home/kalle/temp/${dateString}/ProdentusApp.war" 
                 } 
-                sh 'cp Test/target/*.war /home/kalle/temp/ProdentusApp.war' 
+                
             }
         }
     }
