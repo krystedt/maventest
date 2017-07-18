@@ -143,7 +143,7 @@
 		<repository>
 			<id>myRepoId</id>
       		<name>myCompanyReporsitory</name>
-      		<url>file://home/kalle/temp/releases</url>
+      		<url>file:///home/kalle/temp/releases</url>
 		</repository>
 	</distributionManagement>
 
