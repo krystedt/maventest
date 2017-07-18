@@ -53,47 +53,6 @@
 		<version>1.8.4</version>
 		<scope>test</scope>
 	</dependency>
-    <!-- to test with TomEE and Arquillian
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>arquillian-tomee-remote</artifactId>
-      <version>7.0.3</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.arquillian.junit</groupId>
-      <artifactId>arquillian-junit-container</artifactId>
-      <version>1.1.10.Final</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-      <scope>test</scope>
-    </dependency>
-    -->
-
-    <!-- to test with OpenEJB embedded and Arquillian
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>arquillian-openejb-embedded</artifactId>
-      <version>{project.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.arquillian.junit</groupId>
-      <artifactId>arquillian-junit-container</artifactId>
-      <version>1.1.10.Final</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-      <scope>test</scope>
-    </dependency>
-    -->
   </dependencies>
 
   <build>
@@ -103,7 +62,6 @@
         <directory>src/main/resources</directory>
         <filtering>true</filtering>
       </resource>
-
     </resources>
 
     <plugins>
@@ -180,5 +138,13 @@
       <url>https://repository.apache.org/content/groups/snapshots/</url>
     </repository>
   </repositories>
-
+<!-- 
+	<distributionManagement>
+		<repository>
+			<id>myRepoId</id>
+      		<name>myCompanyReporsitory</name>
+      		<url>file://home/kalle/temp/releases</url>
+		</repository>
+	</distributionManagement>
+	 -->
 </project>
