@@ -2,9 +2,11 @@
 //import java.text.SimpleDateFormat 
 //import java.util.Date
 //proposed method: 
-//1. use release plugin to prepare a build. mvn release:prepare -Dusername=krystedt
-//2. have a jenkins job to checkout tag and copy to test deploy dir.
-//3. when tested merge tag with master and have another jenkins job that sets the production properties.
+//1. use release plugin to prepare a build on test server. mvn release:prepare -Dusername=krystedt
+//2. do a mvn clean install and deploy to test-server
+//3. run mvn release:release with prod properties.
+//4. when release is tested do a manual copy from test to prod.
+
 //might start without jenkins. 
 pipeline {
     agent any
