@@ -20,7 +20,7 @@
 
   <groupId>com.test</groupId>
   <artifactId>Test</artifactId>
-  <version>1.10.0</version>
+  <version>1.10.0-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>Test TomEE Webapp</name>
   <url>http://tomee.apache.org</url>
@@ -31,7 +31,7 @@
   </properties>
   <scm>
     <developerConnection>scm:git:https://github.com/krystedt/maventest.git</developerConnection>
-    <tag>Test-1.10.0</tag>
+    <tag>HEAD</tag>
   </scm>
   
   <dependencies>
